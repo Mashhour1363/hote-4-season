@@ -1,0 +1,388 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazir', 'Tahoma', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Default Colors */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --neutral-color: #ecf0f1;
+}
+
+/* Spring Theme */
+.spring {
+    --primary-color: #FF5E81;
+    --secondary-color: #4CAF50;
+    --accent-color: #ff8ec3;
+    --neutral-color: #F5F5F5;
+}
+
+/* Summer Theme */
+.summer {
+    --primary-color: #028d02;
+    --secondary-color: #ec3737;
+    --accent-color: #2ecc71;
+    --neutral-color: #F5F5F5;
+}
+
+/* Autumn Theme */
+.autumn {
+    --primary-color: #A52A2A;
+    --secondary-color: #FFA500;
+    --accent-color: #8B0000;
+    --neutral-color: #F5F5DC;
+}
+
+/* Winter Theme */
+.winter {
+    --primary-color: #2C3E50;
+    --secondary-color: #5781ac;
+    --accent-color: #BDC3C7;
+    --neutral-color: #FFFFFF;
+}
+
+/* Apply default colors initially */
+body {
+    --main-bg-color: var(--neutral-color);
+    --text-color: #333;
+}
+
+/* Apply the colors to elements */
+body {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+}
+
+/* Theme Bar */
+.theme-bar {
+    position: fixed;
+    top: 25vh;
+    right: 0;
+    width: 50px;
+    height: 50vh;
+    background-color: #333333;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+    border-top: 5px #eee solid;
+    border-bottom: 5px #eee solid;
+    border-left: 5px #eee solid;
+    z-index: 10;
+}
+
+.theme-button {
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+/* Spring Theme Button */
+.theme-button.spring {
+    background-color: #FF5E81;
+}
+
+/* Summer Theme Button */
+.theme-button.summer {
+    background-color: #028d02;
+}
+
+/* Autumn Theme Button */
+.theme-button.autumn {
+    background-color: #A52A2A;
+}
+
+/* Winter Theme Button */
+.theme-button.winter {
+    background-color: #2C3E50;
+}
+
+/* Header Section */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    /* padding: 15px; */
+    text-align: center;
+    height: 100vh;
+}
+
+#main-header {
+    transition: background-image 0.5s ease-in-out 0.5s;
+}
+
+nav {
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
+}
+
+#main-header nav:hover {
+    background: var(--primary-color);
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+/* Hero Section */
+.hero {
+    /* Hero images will be added here */
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 5px;
+}
+
+/* About Us Section */
+.section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.section:nth-child(odd) .background{
+    clip-path: polygon(0% 0%, 40% 0%, 60% 100%, 0% 100%);
+}
+
+.section:nth-child(even) .background{
+    clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 40% 100%);
+}
+
+.cover {
+    position: absolute;
+    text-align: center;
+    color: #000;
+    width: 30%;
+    height: 80%;
+    border-radius: 40px;
+    padding: 2em;
+    border: 3px var(--accent-color) solid;
+    z-index: 1;
+}
+
+.section .cover{
+    top: 10%;
+    transform: translate(-50%, 0%);
+}
+
+.section:nth-child(odd) .cover{
+    left: 80%;
+}
+
+.section:nth-child(even) .cover{
+    left: 20%;
+}
+
+.cover h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+.cover p {
+    padding: 2em;
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+.section1 .background {
+    background-color: var(--accent-color);
+    background-image: url('images/hotel/01.jpg'); /* Add your image URL */
+    background-size: contain;
+}
+
+.section2 .background {
+    background-color: var(--accent-color);
+    background-image: url('images/hotel/02.jpg'); /* Add your image URL */
+    background-size: contain;
+    background-position: right;
+}
+
+.section3 .background {
+    background-color: var(--accent-color);
+    background-image: url('images/hotel/03.jpg'); /* Add your image URL */
+    background-size: contain;
+}
+
+/* Rooms Section */
+.rooms {
+    background-color: var(--neutral-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.rooms h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Dining Section */
+.dining {
+    background-color: var(--neutral-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.dining h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Booking Section */
+.booking {
+    background-color: var(--neutral-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.booking h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.quick-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+.social-icon {
+    font-size: 1.5em;
+}
+
+/* Reserve section */
+.booking {
+    font-family: 'Tahoma', 'Arial', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.booking h2{
+    color: var(--primary-color);
+}
+
+form {
+    background-color: var(--main-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 50%;
+    font-size: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    background-color: var(--neutral-color);
+    color: var(--text-color);
+    box-sizing: border-box;
+    font-size: inherit;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--neutral-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+/* Persian datepicker styling */
+.pwt-datepicker-container {
+    font-family: 'Tahoma', 'Arial', sans-serif;
+    background-color: var(--neutral-color);
+}
+
+.pwt-days,
+.pwt-month-select,
+.pwt-year-select {
+    background-color: var(--neutral-color);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+}
+
+.pwt-next,
+.pwt-prev {
+    color: var(--primary-color);
+}

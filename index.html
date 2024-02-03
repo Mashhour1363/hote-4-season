@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme-switcher.js" defer></script>
+    <title>هتل چهار فصل</title>
+</head>
+
+<body class="spring">
+
+    <!-- Theme Bar Section -->
+    <div class="theme-bar">
+        <button class="theme-button spring" onclick="changeTheme('spring')"></button>
+        <button class="theme-button summer" onclick="changeTheme('summer')"></button>
+        <button class="theme-button autumn" onclick="changeTheme('autumn')"></button>
+        <button class="theme-button winter" onclick="changeTheme('winter')"></button>
+    </div>
+
+    <!-- Header Section -->
+    <header id="main-header">
+        <nav>
+            <a href="#">خانه</a>
+            <a href="#">اتاق‌ها</a>
+            <a href="#">رستوران‌ها</a>
+            <a href="#">رویدادها</a>
+            <a href="#">گالری</a>
+            <a href="#">تماس</a>
+            <a href="#" class="book-now">رزرو کنید</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Hero images will be added here -->
+        <h1>خوش آمدید به هتل چهار فصل</h1>
+        <p>تجربه لوکس و راحتی در هر اقامت.</p>
+        <a href="#" class="cta-button" id="start-booking">اتاق‌ها را بررسی کنید</a>
+    </section>
+
+    
+    <!-- About Us Section -->
+    <section class="about-us">
+        <div class="section section1">
+            <div class="background"></div>
+            <div class="cover">
+                <h2>یک ایده نمادین</h2>
+                <p>هتل چهار فصل" یک ایده خیالی و نمادین است که به منظور نمایش توانایی‌های توسعه وب و ابتکارات خلاقانه ما در این زمینه طراحی و توسعه داده شده است. این هتل به عنوان یک پروژه مجازی برجسته، محیطی لوکس و منحصر به فرد ارائه می‌دهد که در هر فصل سال، تجربه اقامتی استثنایی را به مهمانان ارائه می‌کند.</p>
+            </div>
+        </div>
+
+        <div class="section section2">
+            <div class="background"></div>
+            <div class="cover">
+                <h2>طراحی چهارفصل</h2>
+                <p>در هتل چهار فصل، هر فصل با طراحی منحصر به فرد و رنگ‌های خاص خود تجسم شده است. از زیبایی گلهای گیاهان بهاری گرفته تا دلنشینی درختان سرسبز تابستان، از خشکی برگ‌های زرد و نارنجی پاییز تا سکوت و آرامش برفی زمستان، هر فصل در این هتل داستان خود را با طراحی جذاب و محتوای فوق‌العاده به مهمانان خود ارائه می‌دهد.</p>
+            </div>
+        </div>
+
+        <div class="section section3">
+            <div class="background"></div>
+            <div class="cover">
+                <h2>محیطی منعطف</h2>
+                <p>با ابتکارات تکنولوژی دیجیتال و توسعه وب، هتل چهار فصل به عنوان یک پروژه نمادین، محیطی آنلاین با طراحی منعطف و تجربه کاربری بی‌نظیر فراهم می‌کند. از رزرو آنلاین تا گشت و گذار در گالری تصاویر و اطلاعات رستوران‌ها، هتل چهار فصل نمایانگر توانمندی‌های ما در ایجاد تجربه‌بی فوق‌العاده برای کاربران است</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking">
+        <!-- Booking interface with calendar, room types, and special offers -->
+        <form>
+            <h2>رزرو اقامت</h2>
+            
+            <label for="name">نام و نام خانوادگی:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">ایمیل:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="phone">تلفن:</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+            <label for="check-in">تاریخ ورود:</label>
+            <input data-jdp type="button" id="check-in" name="check-in" required>
+    
+            <label for="check-out">تاریخ خروج:</label>
+            <input data-jdp type="button" id="check-out" name="check-out" required>
+    
+            <label for="room-type">نوع اتاق:</label>
+            <select id="room-type" name="room-type" required>
+                <option value="single">اتاق تک نفره</option>
+                <option value="double">اتاق دو نفره</option>
+                <option value="suite">سوئیت</option>
+            </select>
+    
+            <button type="submit" id="submit-booking">رزرو کنید</button>
+        </form>
+    
+        <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
+        <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
+        
+        <script>
+            jalaliDatepicker.startWatch();
+        </script>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="quick-links">
+            <a href="#">سیاست حفظ حریم خصوصی</a>
+            <a href="#">شرایط و ضوابط</a>
+            <a href="#" class="newsletter-signup">عضویت در خبرنامه</a>
+        </div>
+        <div class="social-media">
+            <a href="#" class="social-icon">فیسبوک</a>
+            <a href="#" class="social-icon">توییتر</a>
+            <a href="#" class="social-icon">اینستاگرام</a>
+        </div>
+    </footer>
+
+    <script src="image-changer.js"></script>
+
+</body>
+</html>
